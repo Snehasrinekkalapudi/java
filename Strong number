@@ -1,0 +1,32 @@
+import java.util.*;
+class Strong{
+  public static void main(String[]args){
+      int n;
+      int rem;
+      int sum=0;
+      int temp;
+      int fact;
+      int i;
+      System.out.println("Enter n:");
+      Scanner sc=new Scanner(System.in);
+      n=sc.nextInt();
+      temp=n;
+      while(temp!=0){
+         i=1;
+         fact=1;
+         rem=temp%10;
+         while(i<=rem){ 
+            fact*=i;
+            i++;
+         }
+         sum+=fact;
+         temp=temp/10;
+      }
+      if(sum==n){
+        System.out.println("Strong number");
+      }
+      else{
+        System.out.println("Not a strong number");
+      }
+  }
+}
