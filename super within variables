@@ -1,0 +1,19 @@
+import java.util.*;
+class S{
+  int x=10;
+}
+class T extends S{
+  int x=20;
+  void method()
+  {
+  System.out.println(super.x);
+  }
+  
+  public static void main(String args[])
+  {
+     T obj=new T();
+     obj.method();
+     
+  
+  }
+}
