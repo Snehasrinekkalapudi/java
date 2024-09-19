@@ -1,0 +1,15 @@
+import java.util.*;
+class B{
+ B(){
+  System.out.println("Parent constructor");
+ }
+}
+class A extends B{
+  A(){
+  super();
+    System.out.println("Child constructor");
+  }
+  public static void main(String args[]){
+    A obj=new A();
+  }
+}
