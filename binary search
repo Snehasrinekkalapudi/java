@@ -1,0 +1,53 @@
+import java.util.*;
+class Binary{
+   static void sort(int a[],int n){
+     int i,j,temp;
+     for(i=0;i<=n;i++){
+       for(j=0;j<n-i-1;j++){
+          if(a[j]>a[j+1]){
+            temp=a[j];
+            a[j]=a[j+1];
+            a[j+1]=temp;
+          }
+       }
+     }
+   }
+   public static void main(String args[]){
+     System.out.print("Enter size of array:");
+     Scanner sc=new Scanner(System.in);
+     int n=sc.nextInt();
+     int arr[]=new int[n];
+     int i;
+     System.out.println("Enter the elements");
+     for(i=0;i<n;i++){
+       arr[i]=sc.nextInt();
+     }
+     sort(arr,n);
+     for(i=0;i<n;i++){
+       System.out.print(arr[i]+" ");
+     }
+     int start=0,end=n-1,mid;
+     int pos=-1;
+     System.out.println("Enter key to find:");
+     int k=sc.nextInt();
+     while(start<=end){
+       mid=(start+end)/2;
+       if(arr[mid]==k){
+         pos=mid+1;
+         break;
+       }
+       else if(k<arr[mid]){
+         end=mid-1;
+       }
+       else{
+         start=mid+1;
+       }
+       }
+       if(pos>0){
+         System.out.printf("Key is found at %d",pos);
+       }
+       else{
+         System.out.println("Key is not found");
+       }
+     }
+}
