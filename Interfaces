@@ -1,0 +1,20 @@
+interface A {
+    void show();
+    void display();
+}
+
+class S implements A {
+    public void show() {
+        System.out.println("Show method");
+    }
+
+    public void display() {
+        System.out.println("Display method");
+    }
+
+    public static void main(String args[]) {
+        S ob = new S();
+        ob.show();
+        ob.display();
+    }
+}
