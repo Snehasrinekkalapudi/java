@@ -1,0 +1,15 @@
+package Cse;
+  public class D{
+     public void show(){
+        System.out.println("User defined package");
+     }
+   }
+
+
+import Cse.D;
+class E{
+   public static void main(String args[]){
+      D obj=new D();
+      obj.show();
+   }
+}
