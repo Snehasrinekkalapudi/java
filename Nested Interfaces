@@ -1,0 +1,20 @@
+interface SS{
+  interface M{
+      void msg();
+  }
+  void show();
+}
+class N implements SS,SS.M
+{
+   public void msg(){
+     System.out.println("Inner Interface");
+   }
+   public void show(){
+     System.out.println("Outer Interface");
+   }
+   public static void main(String args[]){
+      N obj = new N();
+      obj.msg();
+      obj.show();
+   }
+}
