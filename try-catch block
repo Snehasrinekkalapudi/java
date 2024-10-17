@@ -1,0 +1,12 @@
+import java.lang.*;
+class Ex{
+  public static void main(String args[]){
+    try{
+    int a[]={30,50,29,41,12};
+    System.out.println(a[10]);
+  }
+  catch(Exception e){
+   System.out.println(e);
+  }
+}
+}
